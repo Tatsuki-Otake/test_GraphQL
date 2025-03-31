@@ -4,7 +4,7 @@ class Users::SessionsController < Devise::SessionsController
   private
 
   def respond_with(resource, _opts = {})
-    token = request.env['warden-jwt_auth.token']
+    token = request.env["warden-jwt_auth.token"]
     Rails.logger.debug "JWT Token: #{token.inspect}"
     render json: {
       user: resource,

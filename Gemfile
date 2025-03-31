@@ -49,5 +49,5 @@ end
 
 
 gem "graphql", "~> 2.4"
-gem 'devise'
-gem 'devise-jwt'
+gem "devise"
+gem "devise-jwt"
