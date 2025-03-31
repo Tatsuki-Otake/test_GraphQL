@@ -6,7 +6,11 @@ module Mutations
     field :post, Types::PostType, null: false
 
     def resolve(title:, body:)
-      post = Post.create!(title: title, body: body)
+      user = context[:current_user]
+      raise GraphQL::ExecutionError, "認証されていません" unless user
+
+      post = Post.create!(title: title, body: body, user_id: user.id)
+
       { post: post }
     end
   end
