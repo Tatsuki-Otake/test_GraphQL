@@ -123,7 +123,7 @@ GEM
       raabro (~> 1.4)
     globalid (1.2.1)
       activesupport (>= 6.1)
-    graphql (2.4.15)
+    graphql (2.5.1)
       base64
       fiber-storage
       logger
@@ -365,7 +365,7 @@ DEPENDENCIES
   debug
   devise
   devise-jwt
-  graphql (~> 2.4)
+  graphql (~> 2.5)
   kamal
   puma (>= 5.0)
   rails (~> 8.0.1)
